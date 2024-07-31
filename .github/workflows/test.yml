@@ -1,0 +1,16 @@
+name: Test Project
+on: push
+jobs:
+  testM
+  runs-on: windows-latest
+  steps:
+    - name: Get code
+      uses: actions/checkout@v3
+    # NodeJs is not needed to be installed, since it is already installed in the windows-latest runner
+    - name: Install NodJs
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+    - name: Install dependencies
+      run: npm install
+      
