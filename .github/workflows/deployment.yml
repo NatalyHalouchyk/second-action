@@ -5,10 +5,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Get code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       # NodeJs is not needed to be installed, since it is already installed in the windows-latest runner
       - name: Install NodJs
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '14'
       - name: Install dependencies
@@ -20,9 +20,9 @@ jobs:
     runs-on: windows-latest
     steps: 
       - name: Get code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install NodJs
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '14'
       - name: Install dependencies
